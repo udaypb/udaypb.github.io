@@ -12,7 +12,47 @@
         <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="css/theme.css" rel="stylesheet" type="text/css" media="all"/>
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+		
+
+		
+		<style>
+			.scroll-downs {
+  position: absolute;
+  top: 700px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+		</style>
     </head>
     <body class="scroll-assist" data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
 
@@ -66,25 +106,107 @@
 		                        </div>
 		                        <div class="col-md-7 features__avatar">
 		                            <img alt="avatar" src="img/1.png">
-		                        </div>
-		                    </div>
+								</div>
+								
+
+							
+							</div>
+							<div class="scroll-downs">
+									<div class="mousey">
+									  <div class="scroller"></div>
+									</div>
+								  </div>
 
 		                </div>
 
-		            </section><section class="bg--secondary space--sm shop-tabs">
+					</section>
+					
+					
+					<section class="slider slider--animate height-100 cover cover-5 parallax" data-arrows="true" data-paging="true" data-timing="8000">
+							<ul class="slides">
+									<li class="imagebg" data-overlay="4">
+											<div class="background-image-holder">
+												<img alt="image" src="img/landing1.jpg">
+											</div>
+											<div class="container pos-vertical-center">
+												<div class="row">
+													<div class="col-sm-12 text-center">
+														<h1>20 years of Experience</h1>
+														<p class="lead">
+																I have over 20 years of experience representing corporations and R&amp;D / academic
+																institutions at all stages of the IP and life sciences business lifecycle. 
+														</p>
+														
+													</div>
+												</div>
+											</div>
+										</li>
+								<li class="imagebg" data-overlay="4">
+									<div class="background-image-holder">
+										<img alt="image" src="img/landing2.jpg">
+									</div>
+									<div class="container pos-vertical-center">
+										<div class="row">
+											<div class="col-sm-12 text-center">
+												<h1>Support</h1>
+												<p class="lead">
+														I assist clients in a wide variety of matters in the pharmaceutical, biotech, and chemical
+														industries.
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							
+								<li class="imagebg" data-overlay="4">
+										<div class="background-image-holder">
+											<img alt="image" src="img/landing3.jpg">
+										</div>
+										<div class="container pos-vertical-center">
+											<div class="row">
+												<div class="col-sm-12 text-center">
+													<h1>Commitment</h1>
+													<p class="lead">
+															I am committed to offering clients the high-quality legal
+															services they would expect of a larger firm with the individual and focused attention of a smaller
+															practice. Based in Princeton, New Jersey, I serve clients from around the world.
+													</p>
+												</div>
+											</div>
+										</div>
+									</li>
+							</ul>
+						</section>
+						
+						
+
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<section class="bg--secondary space--sm shop-tabs">
 		                <div class="container">
 		                    <div class="row">
 		                        <div class="tabs-container tabs-1">
 		                            <ul class="tabs text-center">
 		                                <li class="active">
 		                                    <div class="tab__title btn">
-		                                        <span class="btn__text">Reliability</span>
+		                                        <span class="btn__text">Experience</span>
 		                                    </div>
 		                                    <div class="tab__content">
 		                                        <div class="row pos-vertical-align-columns">
 		                                            <div class="col-md-6">
-		                                                <h6>our foremost aim is to assure reliability</h6>
-		                                                <p class="lead">At NANDA P.B.A. KUMAR, LLC, providing workable advice and cost effective assistance to our clients is our foremost aim
+		                                                <h6>Over 20 years of experience</h6>
+		                                                <p class="lead">
+															I have over 20 years of experience representing corporations and R&amp;D / academic
+																institutions at all stages of the IP and life sciences business lifecycle. Through this broad
+																experience, I have gained a unique ability to effectively integrate clients’ interests and a business
+																perspective into my law practice.
 		                                                </p>
 		                                            </div>
 		                                            <div class="col-md-4 col-md-push-1 hidden-sm">
@@ -100,9 +222,10 @@
 		                                    <div class="tab__content">
 		                                        <div class="row pos-vertical-align-columns">
 		                                            <div class="col-md-6">
-		                                                <h6>All of our clients get golden service with personal attention for all their grievances.</h6>
+		                                                <h6>All of my clients get golden service with personal attention for all their grievances.</h6>
 		                                                <p class="lead">
-		                                                    The clients benefit from our approach of viewing issues from both a business as well as a legal perspective; focusing on problem avoidance, not just problem solving.
+																I assist clients in a wide variety of matters in the pharmaceutical, biotech, and chemical
+																industries.
 		                                                </p>
 		                                            </div>
 		                                            <div class="col-md-4 col-md-push-1 hidden-sm">
@@ -120,7 +243,10 @@
 		                                            <div class="col-md-6">
 		                                                <h6>A Commitment To excellence</h6>
 		                                                <p class="lead">
-		                                                    We are always striving for excellence in every work that we pursue.</p>
+																I am committed to offering clients the high-quality legal
+																services they would expect of a larger firm with the individual and focused attention of a smaller
+																practice. Based in Princeton, New Jersey, I serve clients from around the world.
+															</p>
 		                                            </div>
 		                                            <div class="col-md-4 col-md-push-1 hidden-sm">
 		                                                <img alt="pic" src="img/excellence.png">
@@ -212,10 +338,13 @@
 
 
 		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
         <script src="js/twitterfetcher.min.js"></script>
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/scrollreveal.min.js"></script>
         <script src="js/parallax.js"></script>
-        <script src="js/scripts.js"></script>
+		<script src="js/scripts.js"></script>
+	
+      
     </body>
 </html>
