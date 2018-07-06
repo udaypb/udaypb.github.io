@@ -58,7 +58,8 @@
   z-index: 15;
   top: 50%;
   left: 50%;
-  margin: -100px 0 0 -250px;
+  margin: -100px 0 0 -100px;
+  width: 200px;
  
 }
 
@@ -71,7 +72,7 @@
 }
 
 
-.d-spinner {
+/* .d-spinner {
   -webkit-animation-duration: 2.4s;
           animation-duration: 2.4s;
   -webkit-animation-timing-function: cubic-bezier(0, 1, 0.3, 1);
@@ -420,6 +421,47 @@
     -webkit-transform: rotateZ(45deg) scale(0.61);
             transform: rotateZ(45deg) scale(0.61);
   }
+} */
+
+
+.draw-hammer {
+  stroke: #FFFFFF;
+  stroke-width: 0.8311;
+  stroke-dasharray: 175px;
+  stroke-dashoffset: 175px;
+  animation-name: draw;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;  /* let this be infinitee*/
+  animation-timing-function: linear;
+}
+.hammer-fill {
+  stroke:#FFFFFF;
+  animation-name: stand;
+  stroke-dasharray: 125px;
+  stroke-dashoffset: 125px;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes stand {
+  50% {
+    fill:transparent;
+  }
+  65% {
+    fill: #FFFFFF;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #FFFFFF;
+  }
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+
 }
 
 		</style>
@@ -427,17 +469,40 @@
     <body class="scroll-assist" data-reveal-selectors="section:not(.masonry):not(:first-of-type):not(.parallax)">
 
 
-			<div id="loader">
+			<div id="loader" style="text-align: center">
 				<div id="loading_image" >
-					<svg width='150px' height='179px' version='1.1' xmlns='http://www.w3.org/2000/svg'>
+						<svg version="1.1" id="hamer" class="draw-hammer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 52 39.2" enable-background="new 0 0 52 39.2" xml:space="preserve">
+				   <g class="hammer">
+				   <path class="hammer-fill" fill="transparent" stroke="#FFFFFF" stroke-miterlimit="10" d="M48.4,36l-0.8,0.9c-1,1.2-2.9,1.3-4.3,0.2L43.2,37l-11-11.6
+					   c-0.4-0.4-0.5-1.1-0.1-1.5l0.8-1c0.4-0.4,1-0.5,1.5-0.1l13.2,8.8c0.1,0,0.1,0.1,0.1,0.1C49.2,32.9,49.4,34.8,48.4,36z"/>
+				   <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M22.5,1.9l-0.8,0.9c-0.2,0.2-0.2,0.5-0.2,0.5l0.2,0.8
+					   c0.1,0.3,0.1,0.6,0,0.9c-0.2,0.7-0.8,1.2-1.6,1.3l-1,0.1c-0.3,0-0.7,0.1-0.9,0.3l-4.8,5.7c0,0,0,0-0.1,0.1l-0.1,0.1
+					   c-0.1,0.2-0.1,0.4-0.1,0.6v0.9c0,1-0.6,1.8-1.6,1.9l-1,0.1c0,0-0.2,0-0.4,0.3l-0.8,0.9c-0.2,0.3-0.1,0.7,0.2,1l7.8,6.6
+					   c0.4,0.3,0.9,0.4,1.2,0.1l0.8-0.9c0.2-0.2,0.1-0.6,0.1-0.6l-0.2-0.8c-0.1-0.3-0.1-0.7,0-0.9c0.2-0.7,0.8-1.2,1.6-1.3l1.1-0.1
+					   c0.3,0,0.7,0,0.9-0.3l4.8-5.7c0,0-0.1,0.1,0,0c0,0,0.2-0.1,0.2-0.2c0.1-0.2,0.1-0.7,0.1-0.7l-0.1-0.9c0-1,0.6-1.8,1.6-1.9l1.1-0.1
+					   c0,0,0.3,0,0.5-0.2l0.8-0.9C32,9.2,32,8.4,31.7,8.1l-7.8-6.6C23.4,1.3,22.8,1.6,22.5,1.9z"/>
+				   <path class="hammer-fill" fill="transparent" stroke="#FFFFFF" stroke-miterlimit="10" d="M31.6,21c-0.7-1.1-0.8-2.8-0.8-3.6c0-0.4-0.2-0.7-0.4-0.9l-0.8-0.7
+					   c-0.4-0.3-1-0.3-1.4,0.1l-3.8,4.5c-0.3,0.4-0.3,1,0.1,1.4l0.8,0.7c0.3,0.2,0.6,0.3,1,0.3c0.8-0.1,2.5-0.3,3.7,0.2
+					   c0.5,0.2,1-0.1,1.4-0.5l0,0C31.8,21.9,31.8,21.4,31.6,21z"/>
+				   </g>
+				   <g class="base">
+				   <path class="hammer-fill" fill="transparent" stroke="#FFFFFF" stroke-miterlimit="10" d="M25.2,38.6H1.9c-0.4,0-0.8-0.4-0.8-0.8V37c0-0.4,0.4-0.8,0.8-0.8
+					   h23.3c0.4,0,0.8,0.4,0.8,0.8v0.8C26,38.3,25.6,38.6,25.2,38.6z"/>
+				   <path class="hammer-fill" fill="transparent" stroke="#FFFFFF" stroke-miterlimit="10" d="M23.2,35.2H3.7c-0.4,0-0.7-0.3-0.7-0.7l0,0c0-0.4,0.3-0.7,0.7-0.7
+					   h19.6c0.4,0,0.7,0.3,0.7,0.7l0,0C23.9,34.9,23.6,35.2,23.2,35.2z"/>
+				   </g>
+				   </svg>
+					<!-- <svg width='150px' height='179px' version='1.1' xmlns='http://www.w3.org/2000/svg'>
 							<path class='d-spinner d-spinner__four' d='M144.421372,121.923755 C143.963266,123.384111 143.471366,124.821563 142.945674,126.236112 C138.856723,137.238783 133.098899,146.60351 125.672029,154.330576 C118.245158,162.057643 109.358082,167.978838 99.0105324,172.094341 C89.2149248,175.990321 78.4098994,178.04219 66.5951642,178.25 L0,178.25 L144.421372,121.923755 L144.421372,121.923755 Z'/>
 							<path class='d-spinner d-spinner__three' d='M149.033408,92.6053108 C148.756405,103.232477 147.219069,113.005232 144.421372,121.923755 L0,178.25 L139.531816,44.0158418 C140.776016,46.5834381 141.913968,49.2553065 142.945674,52.0314515 C146.681818,62.0847774 148.711047,73.2598899 149.033408,85.5570717 L149.033408,92.6053108 L149.033408,92.6053108 Z'/>
 							<path class='d-spinner d-spinner__two' d='M80.3248924,1.15770478 C86.9155266,2.16812827 93.1440524,3.83996395 99.0105324,6.17322306 C109.358082,10.2887257 118.245158,16.2099212 125.672029,23.9369874 C131.224984,29.7143944 135.844889,36.4073068 139.531816,44.0158418 L0,178.25 L80.3248924,1.15770478 L80.3248924,1.15770478 Z'/>
 							<path class='d-spinner d-spinner__one' d='M32.2942065,0 L64.5884131,0 C70.0451992,0 75.290683,0.385899921 80.3248924,1.15770478 L0,178.25 L0,0 L32.2942065,0 L32.2942065,0 Z'/>
-						  </svg>
+						  </svg> -->
 						  <h4>Loading...</h4>
-						  <h3 style="margin-top: 50%">NANDA KUMAR LAW OFFICES </h3>
+						 
 						</div>
+						<h3 style="margin-top: 40%">NANDA KUMAR LAW OFFICES </h3>
 					  </div>
 
 
